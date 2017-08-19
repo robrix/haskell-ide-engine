@@ -10,8 +10,6 @@ packages:
          hie-hare/
          hie-hoogle/
          hie-plugin-api/
-         ../haskell-lsp/
-         ../../lspitzner/brittany
-         -- ../ghc-mod/
+optional-packages: vendor/*/ vendor/ghc-mod/ghc-mod-core/
 
 jobs: $ncpus
