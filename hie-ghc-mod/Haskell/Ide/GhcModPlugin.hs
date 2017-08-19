@@ -148,7 +148,7 @@ setTypecheckedModule :: Uri -> IdeM (IdeResponse (Diagnostics, AdditionalErrs))
 setTypecheckedModule uri =
   pluginGetFile "setTypecheckedModule: " uri $ \fp -> do
     rfm <- GM.mkRevRedirMapFunc
-    ((diags', errs), mtm) <- GM.getTypecheckedModuleGhc (myLogger rfm) fp
+    ((diags', errs), mtm) <- GM.getTypecheckedModuleGhc' (myLogger rfm) fp
     let diags = Map.insertWith Set.union uri Set.empty diags'
     case mtm of
       Nothing -> do
