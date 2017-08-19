@@ -12,17 +12,11 @@ packages:
 - hie-hoogle
 - hie-plugin-api
 - hie-brittany
-- location:
-    git: https://github.com/alanz/haskell-lsp.git
-    commit: 50076561c9c9e4d86536efd9458ac3f1d14a68a4
+- location: vendor/haskell-lsp
   extra-dep: true
-- location:
-    git: https://github.com/robrix/brittany.git
-    commit: 7a6be9c6dfb7655e6d2c74fe6d09504dd79c6312
+- location: vendor/brittany.git
   extra-dep: true
-- location:
-    git: https://github.com/robrix/ghc-dump-tree.git
-    commit: 2e3dc742e6a701f3b9615a3d5a7d0dbc02cd60d4
+- location: vendor/ghc-dump-tree
   extra-dep: true
 - location: vendor/HaRe
   extra-dep: true
