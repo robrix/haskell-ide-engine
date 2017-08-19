@@ -21,8 +21,8 @@ packages:
     commit: 25468236960db97cad9f1c1317ce502ea31e27fd
   extra-dep: true
 - location:
-    git: https://github.com/alanz/HaRe.git
-    commit: f3b4fd1b65007184df9bb7743d29a4347057a422
+    git: https://github.com/robrix/HaRe.git
+    commit: 0426ea379e57f2f82119126895eb8a773cd8337f
   extra-dep: true
 - location:
     git: https://github.com/robrix/cabal-helper.git
