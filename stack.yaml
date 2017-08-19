@@ -30,7 +30,7 @@ packages:
   extra-dep: true
 - location:
     git: https://github.com/robrix/ghc-mod.git
-    commit: e33bae928f83016f575527d3d16f4be726adcbc2
+    commit: 4b3686f92965d96d65198419b5de314f5906cb26
   extra-dep: true
   subdirs:
     - .
