@@ -30,7 +30,7 @@ packages:
   extra-dep: true
 - location:
     git: https://github.com/robrix/cabal-helper.git
-    commit: b81dad04e6eb0a524d7ecfb10609a3f421dfce73
+    commit: 0abb6db974cd63936add92a1518608ea5144272b
   extra-dep: true
 - location:
     git: https://github.com/robrix/ghc-mod.git
