@@ -24,9 +24,7 @@ packages:
     git: https://github.com/robrix/ghc-dump-tree.git
     commit: 2e3dc742e6a701f3b9615a3d5a7d0dbc02cd60d4
   extra-dep: true
-- location:
-    git: https://github.com/robrix/HaRe.git
-    commit: 0426ea379e57f2f82119126895eb8a773cd8337f
+- location: vendor/HaRe
   extra-dep: true
 - location: vendor/cabal-helper
   extra-dep: true
