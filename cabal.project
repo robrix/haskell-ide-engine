@@ -3,6 +3,7 @@ packages:
          hie-apply-refact/
          hie-base/
          hie-brittany/
+         hie-build-plugin/
          hie-eg-plugin-async/
          hie-example-plugin2/
          hie-ghc-mod/
