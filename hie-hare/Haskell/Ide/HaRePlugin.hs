@@ -288,11 +288,11 @@ getSymbols uri = do
               s x = T.pack . showGhc <$> x
 
               go :: HsDecl RdrName -> [(J.SymbolKind,Located T.Text,Maybe T.Text)]
-              go (TyClD (FamDecl (FamilyDecl _ n _ _ _))) = pure (J.SkClass,s n, Nothing)
-              go (TyClD (SynDecl n _ _ _)) = pure (J.SkClass,s n,Nothing)
-              go (TyClD (DataDecl n _ (HsDataDefn _ _ _ _ cons _) _ _)) =
+              go (TyClD (FamDecl (FamilyDecl _ n _ _ _ _))) = pure (J.SkClass,s n, Nothing)
+              go (TyClD (SynDecl n _ _ _ _)) = pure (J.SkClass,s n,Nothing)
+              go (TyClD (DataDecl n _ _ (HsDataDefn _ _ _ _ cons _) _ _)) =
                 (J.SkClass, s n, Nothing) : concatMap (processCon (unLoc $ s n) . unLoc) cons
-              go (TyClD (ClassDecl _ n _ _ sigs _ fams _ _ _)) =
+              go (TyClD (ClassDecl _ n _ _ _ sigs _ fams _ _ _)) =
                 (J.SkInterface, sn, Nothing) :
                       concatMap (processSig (unLoc sn) . unLoc) sigs
                   ++  concatMap (map setCnt . go . TyClD . FamDecl . unLoc) fams
@@ -438,7 +438,7 @@ getCompletions file (qualifier,ident) =
 
           getCompls = filter ((ident `T.isPrefixOf`) . label)
 
-          pickName imp = fromMaybe (importMn imp) (ideclAs imp)
+          pickName imp = fromMaybe (importMn imp) (fmap unLoc (ideclAs imp))
 
           allModules = map (showMod . pickName) imports
           modCompls = map mkModCompl
