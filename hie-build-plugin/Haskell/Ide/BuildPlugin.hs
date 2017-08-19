@@ -408,7 +408,7 @@ listCabalTargets distDir dir = do
     absDir <- liftIO $ makeAbsolute dir
     return $ Package pkgName absDir comps
   where
-    fixupLibraryEntrypoint n (ChLibName "") = (ChLibName n)
+    -- fixupLibraryEntrypoint n (ChLibName "") = (ChLibName n)
     fixupLibraryEntrypoint _ e = e
 
 -----------------------------------------------
@@ -434,7 +434,9 @@ getStackLocalPackages stackYaml = withBinaryFileContents stackYaml $ \contents -
   return stackLocalPackages
 
 compToJSON ChSetupHsName = object ["type" .= ("setupHs" :: T.Text)]
-compToJSON (ChLibName n) = object ["type" .= ("library" :: T.Text), "name" .= n]
+compToJSON ChLibName = object ["type" .= ("library" :: T.Text)]
+compToJSON (ChSubLibName n) = object ["type" .= ("sublibrary" :: T.Text), "name" .= n]
+compToJSON (ChFLibName n) = object ["type" .= ("foreignlibrary" :: T.Text), "name" .= n]
 compToJSON (ChExeName n) = object ["type" .= ("executable" :: T.Text), "name" .= n]
 compToJSON (ChTestName n) = object ["type" .= ("test" :: T.Text), "name" .= n]
 compToJSON (ChBenchName n) = object ["type" .= ("benchmark" :: T.Text), "name" .= n]
