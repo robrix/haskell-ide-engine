@@ -10,6 +10,7 @@ packages:
          hie-hare/
          hie-hoogle/
          hie-plugin-api/
+
 optional-packages: vendor/*/ vendor/ghc-mod/ghc-mod-core/
 
 jobs: $ncpus
