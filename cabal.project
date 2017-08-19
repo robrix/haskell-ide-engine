@@ -13,3 +13,5 @@ packages:
          ../haskell-lsp/
          ../../lspitzner/brittany
          -- ../ghc-mod/
+
+jobs: $ncpus
