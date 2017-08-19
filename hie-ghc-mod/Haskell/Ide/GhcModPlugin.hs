@@ -77,7 +77,7 @@ logDiag rfm eref dref df _reason sev spn style msg = do
   let msgTxt = T.pack $ renderWithStyle df msg style
   case eloc of
     Right (Location uri range) -> do
-      let update = Map.insertWith' Set.union uri l
+      let update = Map.insertWith Set.union uri l
             where l = Set.singleton diag
           diag = Diagnostic range (Just $ lspSev sev) Nothing (Just "ghcmod") msgTxt
       modifyIORef' dref update
@@ -115,7 +115,7 @@ srcErrToDiag df rfm se = do
         (m,es) <- processMsgs xs
         case res of
           Right (uri, diag) ->
-            return (Map.insertWith' Set.union uri (Set.singleton diag) m, es)
+            return (Map.insertWith Set.union uri (Set.singleton diag) m, es)
           Left e -> return (m, e:es)
   processMsgs errMsgs
 
@@ -149,7 +149,7 @@ setTypecheckedModule uri =
   pluginGetFile "setTypecheckedModule: " uri $ \fp -> do
     rfm <- GM.mkRevRedirMapFunc
     ((diags', errs), mtm) <- GM.getTypecheckedModuleGhc (myLogger rfm) fp
-    let diags = Map.insertWith' Set.union uri Set.empty diags'
+    let diags = Map.insertWith Set.union uri Set.empty diags'
     case mtm of
       Nothing -> do
         debugm $ "setTypecheckedModule: Didn't get typechecked module for: " ++ show fp
