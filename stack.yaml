@@ -17,6 +17,10 @@ packages:
     commit: 50076561c9c9e4d86536efd9458ac3f1d14a68a4
   extra-dep: true
 - location:
+    git: https://github.com/robrix/brittany.git
+    commit: 7a6be9c6dfb7655e6d2c74fe6d09504dd79c6312
+  extra-dep: true
+- location:
     git: https://github.com/robrix/ghc-dump-tree.git
     commit: 25468236960db97cad9f1c1317ce502ea31e27fd
   extra-dep: true
