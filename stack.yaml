@@ -25,6 +25,10 @@ packages:
     commit: f3b4fd1b65007184df9bb7743d29a4347057a422
   extra-dep: true
 - location:
+    git: https://github.com/robrix/ghc-dump-tree.git
+    commit: 25468236960db97cad9f1c1317ce502ea31e27fd
+  extra-dep: true
+- location:
     git: https://github.com/robrix/ghc-mod.git
     commit: e33bae928f83016f575527d3d16f4be726adcbc2
   extra-dep: true
