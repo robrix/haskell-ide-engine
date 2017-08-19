@@ -30,13 +30,10 @@ packages:
   extra-dep: true
 - location: vendor/cabal-helper
   extra-dep: true
-- location:
-    git: https://github.com/robrix/ghc-mod.git
-    commit: fa40e5f14ae269e29f1290dd355fe02114bedf64
+- location: vendor/ghc-mod
   extra-dep: true
-  subdirs:
-    - .
-    - ghc-mod-core
+- location: vendor/ghc-mod/ghc-mod-core
+  extra-dep: true
 
 extra-deps:
 - apply-refact-0.4.1.0
