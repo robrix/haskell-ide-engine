@@ -46,6 +46,7 @@ extra-deps:
 - monad-memo-0.4.1
 - hoogle-5.0.13
 - brittany-0.8.0.2
+- syz-0.2.0.0
 flags:
   haskell-ide-engine:
     pedantic: true
