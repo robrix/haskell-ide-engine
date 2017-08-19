@@ -296,7 +296,7 @@ listFlagsCabal d = do
         flags = genPackageFlags gpd
     return (name, flags)
 
-flagToJSON f = object ["name" .= ((\(FlagName s) -> s) $ flagName f), "description" .= flagDescription f, "default" .= flagDefault f]
+flagToJSON f = object ["name" .= (unFlagName $ flagName f), "description" .= flagDescription f, "default" .= flagDefault f]
 
 -----------------------------------------------
 
