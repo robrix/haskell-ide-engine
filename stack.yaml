@@ -37,7 +37,7 @@ packages:
     - ghc-mod-core
 
 extra-deps:
-- apply-refact-0.3.0.1
+- apply-refact-0.4.1.0
 - butcher-1.1.0.1
 - czipwith-1.0.0.0
 - data-tree-print-0.1.0.0
