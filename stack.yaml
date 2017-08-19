@@ -28,9 +28,7 @@ packages:
     git: https://github.com/robrix/HaRe.git
     commit: 0426ea379e57f2f82119126895eb8a773cd8337f
   extra-dep: true
-- location:
-    git: https://github.com/robrix/cabal-helper.git
-    commit: ba29c035264ae6a4cd2ad4c582adbe1f765fbe3d
+- location: vendor/cabal-helper
   extra-dep: true
 - location:
     git: https://github.com/robrix/ghc-mod.git
