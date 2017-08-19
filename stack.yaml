@@ -17,8 +17,8 @@ packages:
     commit: 50076561c9c9e4d86536efd9458ac3f1d14a68a4
   extra-dep: true
 - location:
-    git: https://github.com/alanz/ghc-dump-tree.git
-    commit: 9dbca928ad5507b144f46bb95123a08d24f24808
+    git: https://github.com/robrix/ghc-dump-tree.git
+    commit: 25468236960db97cad9f1c1317ce502ea31e27fd
   extra-dep: true
 - location:
     git: https://github.com/alanz/HaRe.git
@@ -27,10 +27,6 @@ packages:
 - location:
     git: https://github.com/robrix/cabal-helper.git
     commit: b81dad04e6eb0a524d7ecfb10609a3f421dfce73
-  extra-dep: true
-- location:
-    git: https://github.com/robrix/ghc-dump-tree.git
-    commit: 25468236960db97cad9f1c1317ce502ea31e27fd
   extra-dep: true
 - location:
     git: https://github.com/robrix/ghc-mod.git
