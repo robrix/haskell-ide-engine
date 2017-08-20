@@ -14,7 +14,7 @@ packages:
 - hie-brittany
 - location: vendor/haskell-lsp
   extra-dep: true
-- location: vendor/brittany.git
+- location: vendor/brittany
   extra-dep: true
 - location: vendor/ghc-dump-tree
   extra-dep: true
